@@ -127,3 +127,46 @@ def larger_list(lst1, lst2):
 
 #Uncomment the line below when your function is done
 print(larger_list([4, 10, 2, 5], [-10, 2, 5, 10]))
+
+"""
+Write a function named combine_sort that has two parameters named lst1 and lst2.
+
+The function should combine these two lists into one new list and sort the result. Return the new sorted list.
+"""
+#Write your function here
+def combine_sort(lst1, lst2):
+    return sorted(lst1 + lst2)
+
+#Uncomment the line below when your function is done
+print(combine_sort([4, 10, 2, 5], [-10, 2, 5, 10]))
+
+"""
+Create a function called append_size that has one parameter named lst.
+
+The function should add all of the numbers between 1 and the size of lst (inclusive) to the end of lst. The function should then return this new list.
+
+For example, if lst was [23, 42, 108], the function should return [23, 42, 108, 1, 2, 3] because the size of lst was originally 3.
+"""
+#Write your function here
+def append_size(lst):
+    end_lst = list(range(1, len(lst)+1))
+    lst += end_lst
+    return lst
+
+#Uncomment the line below when your function is done
+print(append_size([23, 42, 108]))
+
+"""
+Create a function called every_three_nums that has one parameter named start.
+
+The function should return a list of every third number between start and 100 (inclusive). For example, every_three_nums(91) should return the list [91, 94, 97, 100]. If start is greater than 100, the function should return an empty list.
+"""
+#Write your function here
+def every_three_nums(start):
+    if start < 101:
+        return list(range(start, 101, 3))
+    else:
+        return list()
+
+#Uncomment the line below when your function is done
+print(every_three_nums(91))
